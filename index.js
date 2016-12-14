@@ -29,16 +29,14 @@ batteryBatches.reduce((a,b)=>{
   return totalBatteries
 },totalBatteries)
 
+
 var wordCountMap = {};
-
-var wordCountMap = monologueLines.reduce(function(countMap,current){
+  monologueLines.reduce((wordCountMap,current)=>{
   sentenceLength = current.split(" ").length;
-   if(countMap[sentenceLength]){
-     countMap[sentenceLength] +=1;
+   if(wordCountMap[sentenceLength]){
+     wordCountMap[sentenceLength] +=1;
    }else {
-     countMap[sentenceLength] =1;
+     wordCountMap[sentenceLength] =1;
    }
-   return countMap
-}, wordCountMap);
-
-console.log('wordCountMap', wordCountMap)
+   return wordCountMap;
+ }, wordCountMap);
