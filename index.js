@@ -28,4 +28,4 @@ let wordCountMap = monologueLines.reduce(function(wordCountObj, line) {
   }
   wordCountObj[wordCount] += 1;
   return wordCountObj;
-}, {})
+}, {});
