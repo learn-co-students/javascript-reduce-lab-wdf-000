@@ -24,7 +24,7 @@ var totalBatteries = batteryBatches.reduce(function(a, b) {
 
 
 
-var wordCountMap = monologueLines.reduce(function(newObj, value, index){
+var wordCountMap = monologueLines.reduce(function(newObj, value){
 
   var n = value.split(" ").length
 
